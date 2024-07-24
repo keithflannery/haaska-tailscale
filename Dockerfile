@@ -26,7 +26,7 @@ RUN mkdir -p /var/run && ln -s /tmp/tailscale /var/run/tailscale && \
     mkdir -p /var/lib && ln -s /tmp/tailscale /var/lib/tailscale && \
     mkdir -p /var/task && ln -s /tmp/tailscale /var/task/tailscale
 
-RUN sudo yum update tailscale
+RUN yum update tailscale
 
 # Run on container startup.
 EXPOSE 8080
