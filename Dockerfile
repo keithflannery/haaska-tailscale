@@ -1,7 +1,6 @@
 FROM python:3.11-buster as builder
 WORKDIR /app
-COPY ./haaska/haaska.py .
-COPY ./haaska/config/config.json.sample ./config.json
+COPY . ./
 # This is where one could build the application code as well.
 RUN pip install -t . requests pysocks awslambdaric
 
